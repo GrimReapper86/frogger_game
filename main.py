@@ -27,4 +27,10 @@ while game_is_on:
     time.sleep(car.move_speed)
     for i in range(9):
         all_cars[i].move()
+        if all_cars[i].xcor() > 380 or all_cars[i].xcor() < -380:
+            all_cars[i].bounce_x()
+        if all_cars[i].distance(frog) < 40:
+            game_is_on = False
+            level.game_over()
+        if frog.xcor() > 380 :
 screen.exitonclick()

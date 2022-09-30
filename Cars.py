@@ -22,3 +22,7 @@ class Car(Turtle):
     def move(self):
         new_x = self.xcor() + self.x_move
         self.goto(new_x, self.ycor())
+
+    def bounce_x(self):
+        self.x_move *= -1
+        self.move_speed *= 0.9
