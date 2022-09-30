@@ -19,3 +19,6 @@ class Frog(Turtle):
     def down(self):
         new_cord = self.ycor() - 20
         self.goto(self.xcor(), new_cord)
+
+    def frog_position(self):
+        self.goto(0, -270)

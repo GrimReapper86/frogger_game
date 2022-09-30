@@ -29,8 +29,10 @@ while game_is_on:
         all_cars[i].move()
         if all_cars[i].xcor() > 380 or all_cars[i].xcor() < -380:
             all_cars[i].bounce_x()
-        if all_cars[i].distance(frog) < 40:
+        if all_cars[i].distance(frog) < 20:
             game_is_on = False
             level.game_over()
-        if frog.xcor() > 380 :
+    if frog.ycor() > 280:
+        frog.frog_position()
+        level.next_level()
 screen.exitonclick()
